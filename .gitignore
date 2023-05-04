@@ -33,7 +33,16 @@ pytest_cache/
 .tox/
 htmlcov/
 coverage.xml
+# Django
+/staticfiles
 
+# Divio
+.divio
+/data.tar.gz
+/data
+
+# build/
+static/
 # Miscellaneous files
 *.DS_Store
 .idea/

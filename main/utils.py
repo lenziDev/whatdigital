@@ -1,5 +1,5 @@
 from django.contrib.auth import get_user_model
-from django.conf import settings
+from rest_framework.authtoken.models import Token
 
 def get_or_create_user_auth_with_email(email):
     try:
@@ -8,5 +8,8 @@ def get_or_create_user_auth_with_email(email):
         user = get_user_model().objects.create(
             username = email
         )
-    
-    return user
+    try:
+        token = Token.objects.get(user=user)
+    except Token.DoesNotExist:
+        token = Token.objects.create(user=user)
+    return user, token
