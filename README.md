@@ -48,8 +48,6 @@ npm install
 npm start
 ```
 
-## Build
-
 ## Test
 
 The Django project uses pytest, so in the project folder you can run:
@@ -57,9 +55,6 @@ The Django project uses pytest, so in the project folder you can run:
 ```
 pytest
 ```
-
-## Deploy and Running the application
-
 # Limitations
 
 - No authentication in the products backend endpoints. List products and update product check mark
